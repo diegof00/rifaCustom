@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/layout.astro"; // Layout global
+import RegisterForm from "../components/RegisterForm.svelte"; // Nuestro componente Svelte
+console.log("loaded-..");
+---
+
+<Layout>
+  <section class="container mx-auto py-12">
+    <RegisterForm client:only="svelte" />
+  </section>
+</Layout>

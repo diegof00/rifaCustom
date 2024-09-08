@@ -1,0 +1,29 @@
+---
+import Header from "../components/header.svelte"; // Importamos el Header
+import Footer from "../components/footer.svelte";
+---
+
+<style is:global>
+  @import "../styles/global.css";
+</style>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rifas Online</title>
+  </head>
+
+  <body data-theme="modern">
+    <!-- Header -->
+    <Header />
+
+    <!-- Contenido específico de la página -->
+    <main class="container mx-auto py-8">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>
