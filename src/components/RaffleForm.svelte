@@ -13,7 +13,7 @@
     console.log("Rifa creada:", { premio, loteria, fechaSorteo });
     // Aquí puedes manejar el evento, como enviar los datos a una API o cambiar el estado en Astro
     alert(
-      `Rifa creada con premio: ${premio}, lotería: ${loteria}, fecha: ${fechaSorteo}`
+      `Rifa creada con premio: ${premio}, Lotería: ${loteria}, fecha: ${fechaSorteo}`
     );
   };
 </script>
