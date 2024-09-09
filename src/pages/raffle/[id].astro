@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/layout.astro";
+import RaffleDetail from "../../components/RaffleDetail.svelte"; // Componente Svelte
+
+
+export async function getStaticPaths() {
+  // Solo generamos rutas basadas en IDs, sin acceder a los datos de ejemplo
+  return [
+    { params: { id: '1' } },
+    { params: { id: '2' } },
+    { params: { id: '3' } },
+    { params: { id: '4' } },
+    { params: { id: '5' } }
+  ];
+}
+
+const { id } = Astro.params; // Obtener el ID de la URL
+
+---
+
+<Layout>
+  <section class="container mx-auto py-8">
+    <!-- Pasar el ID al componente Svelte -->
+    <RaffleDetail id={id} client:load />
+  </section>
+</Layout>
